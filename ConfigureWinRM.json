@@ -9,16 +9,14 @@
     "resources": [
         {
           "type": "Microsoft.Compute/virtualMachines/extensions",
-          "name": "[concat(variables('vmName'),'/WinRMCustomScriptExtension')]",
+          "name": "[concat(variables('vmName'),'/AZUGENMILLS_WinRM_Config')]",
           "apiVersion": "[variables('apiVersion')]",
           "location": "[resourceGroup().location]",
-          "dependsOn": [
-            "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
-          ],
           "properties": {
             "publisher": "Microsoft.Compute",
             "type": "CustomScriptExtension",
-            "typeHandlerVersion": "1.4",
+            "typeHandlerVersion": "1.8",
+            "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
                 "https://raw.githubusercontent.com/aspurbeck/postbuild/master/AZUGENMILLS_WinRM_Config.ps1'
