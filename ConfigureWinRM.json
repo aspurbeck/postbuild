@@ -23,7 +23,7 @@
               "fileUris": [
                 "https://raw.githubusercontent.com/aspurbeck/postbuild/master/AZUGENMILLS_WinRM_Config.ps1'
               ],
-              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -file ConfigureWinRM.ps1 ',variables('hostDNSNameScriptArgument'))]"
+              "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File AZUGENMILLS_WinRM_Config.ps1"
             }
           }
         }
