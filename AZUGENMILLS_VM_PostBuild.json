@@ -9,7 +9,7 @@
     "resources": [
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(parameters('vmName'),'/ConfigureRemotingForAnsible')]",
+            "name": "[concat(parameters('vmName'),'/AZUGENMILLS_VM_PostBuild')]",
             "apiVersion": "2015-06-15",
             "location": "[resourceGroup().location]",
             "properties": {
@@ -21,7 +21,7 @@
                     "fileUris": [
                         "https://raw.githubusercontent.com/aspurbeck/postbuild/master/AZUGENMILLS_VM_PostBuild.ps1"
                     ],
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ConfigureRemotingForAnsible.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File AZUGENMILLS_VM_PostBuild.ps1"
                 }
             }
         }
