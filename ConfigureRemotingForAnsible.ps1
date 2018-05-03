@@ -63,6 +63,8 @@ Param (
     [switch]$EnableCredSSP
 )
 
+Start-Transcript -Path C:\temp\pslog.txt
+
 Function Write-Log
 {
     $Message = $args[0]
